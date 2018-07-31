@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Admin Areas</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/Scripts/jquery-1.10.2.min.js")
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -16,12 +17,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-              <a href="/admin/dashboard" class="navbar-brand">Dashboard</a>
+                <a href="/admin/dashboard" class="navbar-brand">Dashboard</a>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                   
-                </ul>
+                <ul class="nav navbar-nav"></ul>
                 <ul class="navbar-right">
                     <li><a href="/" class="navbar-brand" target="_blank">cmsshoppingcart</a></li>
                 </ul>
@@ -31,10 +30,11 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        
+
     </div>
 
     @Scripts.Render("~/bundles/scripts")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
